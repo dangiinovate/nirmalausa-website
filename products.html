@@ -33,92 +33,120 @@
   <h1>Technology We <em>Build</em></h1>
   <p class="page-header-desc">
     Beyond consulting, Nirmala Global designs and builds its own technology
-    products — developed in-house through Dangi Innovation Lab.
+    products, from AI marketing to mental-health care to community innovation.
   </p>
 </section>
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
 
-  <!-- FEATURED: DANGI INNOVATION LAB -->
-  <article class="product-featured">
-    <div class="product-media">
-      <span class="product-monogram">DIL</span>
-      <!-- Add the image at this path and it will show automatically -->
-      <img src="assets/products/dangi-innovation-lab.jpg" alt="Dangi Innovation Lab" onerror="this.remove()">
-    </div>
-    <div class="product-body">
-      <div class="product-category">Innovation &amp; R&amp;D</div>
-      <h2 class="product-name">Dangi Innovation Lab</h2>
-      <!-- TODO: replace with the real description -->
-      <p class="product-desc">Description coming soon.</p>
-      <div class="service-tags">
-        <span class="service-tag">R&amp;D</span>
-        <span class="service-tag">Incubation</span>
+  <!--
+    PRODUCT TEMPLATE: copy one <article class="product-row"> block to add a product.
+    - Screenshot: save it in assets/products/ (wide, ~1400px) and set the <img> src.
+    - Rows alternate image left/right automatically.
+    - Status badge: <span class="product-status">Live</span>
+      or <span class="product-status product-status-dev">In Development</span>
+  -->
+
+  <article class="product-row">
+    <a class="product-frame" href="https://dangiinnovationlab.com" target="_blank" rel="noopener">
+      <div class="product-frame-bar">
+        <span></span><span></span><span></span>
+        <div class="product-frame-url">dangiinnovationlab.com</div>
       </div>
+      <img src="assets/products/dangi-innovation-lab.jpg" alt="Dangi Innovation Lab website" loading="lazy">
+    </a>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="product-num">01</span>
+        <span class="product-category">Innovation &amp; Education</span>
+      </div>
+      <h2 class="product-name">Dangi Innovation Lab</h2>
+      <p class="product-tagline">Building globally empowered underserved communities, through innovation, education, and leadership.</p>
+      <p class="product-desc">Dangi Innovation Lab works to empower underserved communities through innovation, education and leadership, with programs, mentorship and a dedicated space to pitch new ideas.</p>
+      <ul class="product-features">
+        <li>Programs open for applications</li>
+        <li>Mentorship: experienced people can join as mentors</li>
+        <li>Pitch Room for presenting new ideas</li>
+      </ul>
+      <div class="service-tags">
+        <span class="service-tag">Programs</span>
+        <span class="service-tag">Mentorship</span>
+        <span class="service-tag">Pitch Room</span>
+      </div>
+      <a href="https://dangiinnovationlab.com" class="btn-primary product-cta" target="_blank" rel="noopener">Visit Website →</a>
     </div>
   </article>
 
-  <div class="products-grid">
+  <article class="product-row">
+    <a class="product-frame" href="https://mindcareos.xyz" target="_blank" rel="noopener">
+      <div class="product-frame-bar">
+        <span></span><span></span><span></span>
+        <div class="product-frame-url">mindcareos.xyz</div>
+      </div>
+      <img src="assets/products/mindcareos.jpg" alt="MindCareOS website" loading="lazy">
+    </a>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="product-num">02</span>
+        <span class="product-category">HealthTech · SaaS</span>
+      </div>
+      <h2 class="product-name">MindCareOS</h2>
+      <p class="product-tagline">The quiet operating system for your mental-health practice.</p>
+      <p class="product-desc">Built in India for psychologists, counsellors, child therapists and therapy clinics. Clinician-supervised from intake to report.</p>
+      <ul class="product-features">
+        <li>WhatsApp intake links for patients</li>
+        <li>Auto-scored PHQ-9, GAD-7 &amp; DASS-21 in one dashboard</li>
+        <li>Clinician-editable draft reports, ready before the session</li>
+      </ul>
+      <div class="service-tags">
+        <span class="service-tag">Mental Health</span>
+        <span class="service-tag">Clinics</span>
+        <span class="service-tag">Practice Management</span>
+      </div>
+      <a href="https://mindcareos.xyz" class="btn-primary product-cta" target="_blank" rel="noopener">Visit Website →</a>
+    </div>
+  </article>
 
-    <!--
-      PRODUCT CARD TEMPLATE — copy one <article> block to add a new product.
-      - Image: put it in assets/products/ and set the <img> src. If the file
-        is missing, the monogram (initials) is shown instead.
-      - Status badge (optional): <span class="product-status">Live</span>
-        or <span class="product-status product-status-dev">In Development</span>
-      - Link (optional): <a href="https://..." class="product-link" target="_blank" rel="noopener">Visit Product →</a>
-    -->
+  <article class="product-row">
+    <a class="product-frame" href="https://damos.lovable.app" target="_blank" rel="noopener">
+      <div class="product-frame-bar">
+        <span></span><span></span><span></span>
+        <div class="product-frame-url">damos.lovable.app</div>
+      </div>
+      <img src="assets/products/damos.jpg" alt="DAMOS website" loading="lazy">
+    </a>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="product-num">03</span>
+        <span class="product-category">AI · Marketing</span>
+      </div>
+      <h2 class="product-name">DAMOS</h2>
+      <p class="product-tagline">AI Marketing Operating System. One platform to run every brand's marketing.</p>
+      <p class="product-desc">DAMOS gives multi-brand teams a single intelligent workspace to plan, create and publish marketing across every brand they manage.</p>
+      <ul class="product-features">
+        <li>Define each brand's voice once</li>
+        <li>Generate AI-powered posts</li>
+        <li>Approve content and schedule across channels</li>
+      </ul>
+      <div class="service-tags">
+        <span class="service-tag">AI</span>
+        <span class="service-tag">Multi-Brand</span>
+        <span class="service-tag">Scheduling</span>
+      </div>
+      <a href="https://damos.lovable.app" class="btn-primary product-cta" target="_blank" rel="noopener">Visit Website →</a>
+    </div>
+  </article>
 
-    <article class="product-card">
-      <div class="product-media">
-        <span class="product-monogram">MC</span>
-        <img src="assets/products/mindcareos.jpg" alt="MindCareOS" onerror="this.remove()">
-      </div>
-      <div class="product-body">
-        <div class="product-category">Product</div>
-        <h3 class="product-name">MindCareOS</h3>
-        <!-- TODO: replace with the real description -->
-        <p class="product-desc">Description coming soon.</p>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-media">
-        <span class="product-monogram">DA</span>
-        <img src="assets/products/damos.jpg" alt="DAMOS" onerror="this.remove()">
-      </div>
-      <div class="product-body">
-        <div class="product-category">Product</div>
-        <h3 class="product-name">DAMOS</h3>
-        <!-- TODO: replace with the real description -->
-        <p class="product-desc">Description coming soon.</p>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-media">
-        <span class="product-monogram">ME</span>
-        <img src="assets/products/marketing-engine.jpg" alt="Marketing Engine" onerror="this.remove()">
-      </div>
-      <div class="product-body">
-        <div class="product-category">Product</div>
-        <h3 class="product-name">Marketing Engine</h3>
-        <!-- TODO: replace with the real description -->
-        <p class="product-desc">Description coming soon.</p>
-      </div>
-    </article>
-
-    <article class="product-card product-card-more">
-      <div class="product-body">
-        <div class="product-category">Pipeline</div>
-        <h3 class="product-name">More in <em>Development</em></h3>
-        <p class="product-desc">New products are underway at Dangi Innovation Lab. Get in touch to learn what we're building next.</p>
-        <a href="index.html#contact" class="product-link">Contact Us →</a>
-      </div>
-    </article>
-
+  <div class="products-more">
+    <div>
+      <div class="section-label">Pipeline</div>
+      <h3 class="products-more-title">More in <em>Development</em></h3>
+      <p>New products are underway at Dangi Innovation Lab. Get in touch to learn what we're building next.</p>
+    </div>
+    <a href="index.html#contact" class="btn-primary">Contact Us</a>
   </div>
+
 </section>
 
 <!-- FOOTER -->
