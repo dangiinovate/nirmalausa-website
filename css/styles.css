@@ -65,6 +65,26 @@ nav {
 }
 .nav-cta:hover { background: var(--navy); color: var(--gold-light); border-color: var(--navy); }
 
+/* Hamburger (shown on small screens only) */
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  background: transparent;
+  border: 1px solid var(--navy);
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block; width: 18px; height: 1.5px;
+  background: var(--navy);
+  transition: transform 0.3s, opacity 0.2s;
+}
+.nav-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-toggle:focus-visible,
+.nav-links a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
@@ -1046,7 +1066,26 @@ footer {
   .service-card:nth-child(1) .service-name { font-size: 2rem; }
   .approach { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
+  nav { gap: 0.75rem; }
+  .nav-cta { margin-left: auto; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    padding: 0.5rem 5vw 1.5rem;
+    background: var(--white);
+    border-bottom: 1px solid rgba(184,146,74,0.25);
+    box-shadow: 0 24px 40px -24px rgba(14,27,46,0.35);
+    opacity: 0; visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+  }
+  .nav-open .nav-links {
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+  .nav-links li { border-bottom: 1px solid var(--border); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { display: block; padding: 1rem 0; font-size: 0.85rem; }
   .form-row { grid-template-columns: 1fr; }
   .hero-stats { display: none; }
   .food-inner { grid-template-columns: 1fr; }
@@ -1058,6 +1097,9 @@ footer {
   .page-header { padding-top: 9rem; }
 }
 @media (max-width: 600px) {
+  .nav-cta { display: none; }
+  .nav-toggle { margin-left: auto; }
+  .nav-logo img { height: 60px; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card:nth-child(n) { grid-column: span 1; }
   .approach-pillars { grid-template-columns: 1fr; }
