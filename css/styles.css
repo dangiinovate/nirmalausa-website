@@ -102,16 +102,6 @@ nav {
   pointer-events: none;
 }
 
-.hero-eyebrow {
-  font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.8rem;
-  display: flex; align-items: center; gap: 1rem;
-}
-.hero-eyebrow::before, .hero-eyebrow::after {
-  content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold); opacity: 0.5;
-}
-
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 7vw, 6.5rem);
@@ -220,41 +210,6 @@ section { padding: 7rem 5vw; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
 }
 
-.about-visual {
-  position: relative; height: 420px;
-}
-
-.about-card {
-  position: absolute;
-  background: var(--navy);
-  padding: 2.5rem;
-}
-.about-card-main {
-  inset: 0 3rem 3rem 0;
-  display: flex; flex-direction: column; justify-content: flex-end;
-}
-.about-card-accent {
-  right: 0; bottom: 0; width: 55%; height: 45%;
-  background: var(--gold);
-  display: flex; align-items: center; justify-content: center;
-}
-.about-card-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem; font-weight: 300;
-  color: var(--white); line-height: 1.2;
-}
-.about-card-sub {
-  font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(212,169,106,0.6); margin-top: 0.5rem;
-}
-.about-card-accent-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem; font-style: italic;
-  color: var(--navy); text-align: center; padding: 1rem;
-  line-height: 1.4;
-}
-
-.about-content { }
 .about-features {
   margin-top: 2.5rem;
   display: flex; flex-direction: column; gap: 1.2rem;
@@ -530,6 +485,30 @@ section { padding: 7rem 5vw; }
 }
 
 /* ─── CONTACT ─── */
+.services-intro { max-width: 360px; }
+.approach-img { width: 100%; height: 200px; overflow: hidden; margin-bottom: 2rem; }
+.approach-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.contact-details {
+  margin-top: 3rem;
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.contact-detail-label {
+  font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.4rem;
+}
+.contact-detail-value {
+  font-size: 0.95rem; color: rgba(240,237,232,0.65);
+  text-decoration: none;
+}
+a.contact-detail-value:hover { color: var(--gold-light); }
+.form-submit { align-self: flex-start; }
+.form-group [aria-invalid="true"] { border-color: #D98A7A; }
+.form-status { font-size: 0.85rem; line-height: 1.6; min-height: 0; }
+.form-status:empty { display: none; }
+.form-status-ok { color: var(--gold-light); }
+.form-status-error { color: #E8A796; }
+
 .contact {
   background: var(--navy);
   display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
@@ -546,7 +525,7 @@ section { padding: 7rem 5vw; }
 }
 .form-group label {
   font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(240,237,232,0.4);
+  color: rgba(240,237,232,0.65);
 }
 .form-group input,
 .form-group select,
@@ -573,6 +552,9 @@ section { padding: 7rem 5vw; }
 .form-group select option { background: var(--navy); color: var(--white); }
 
 /* ─── FOOTER ─── */
+.footer-logo { display: flex; align-items: center; gap: 0.8rem; }
+.footer-logo img { width: 36px; height: 36px; display: block; border-radius: 6px; }
+
 footer {
   background: #050D18;
   padding: 3rem 5vw;
@@ -586,7 +568,7 @@ footer {
   letter-spacing: 0.04em;
 }
 .footer-copy {
-  font-size: 0.72rem; color: rgba(240,237,232,0.2);
+  font-size: 0.72rem; color: rgba(240,237,232,0.45);
   letter-spacing: 0.06em;
 }
 .footer-links {
@@ -594,7 +576,7 @@ footer {
 }
 .footer-links a {
   font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(240,237,232,0.25); text-decoration: none;
+  color: rgba(240,237,232,0.55); text-decoration: none;
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--gold-light); }
@@ -1088,7 +1070,6 @@ footer {
   .nav-links a { display: block; padding: 1rem 0; font-size: 0.85rem; }
   .form-row { grid-template-columns: 1fr; }
   .hero-stats { display: none; }
-  .food-inner { grid-template-columns: 1fr; }
   .gallery-strip-inner { grid-template-columns: repeat(3, 1fr); }
   .team-grid { grid-template-columns: 1fr; }
   .team-grid-members { grid-template-columns: repeat(auto-fit, minmax(260px, 320px)); }
